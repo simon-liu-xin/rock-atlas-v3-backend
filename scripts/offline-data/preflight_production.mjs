@@ -1,6 +1,6 @@
 import { execFile } from "node:child_process";
 import { access, readFile } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { dirname, isAbsolute, resolve } from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 
@@ -49,6 +49,10 @@ function parseArguments(argv) {
 }
 
 async function inspectImplementations() {
+  const builderRoot = process.env.ROCK_ATLAS_JSON_BUILDER_ROOT ?? resolve(repositoryRoot, '../rock-atlas-v3-json-builder');
+  if (!isAbsolute(builderRoot)) throw new Error('ROCK_ATLAS_JSON_BUILDER_ROOT must be absolute');
+  const builderFiles = new Set(['scripts/offline-data/export_full_frontend_jsonl.mjs',
+    'scripts/offline-data/publish_offline_generation.mjs', 'src/data/publication/catalog-jsonl-exporter-v3.ts']);
   const specifications = [
     {
       stage_id: "acquire",
@@ -121,7 +125,7 @@ async function inspectImplementations() {
       const availability = await Promise.all(
         specification.paths.map(async (path) => ({
           path,
-          present: await fileExists(resolve(repositoryRoot, path)),
+          present: await fileExists(resolve(builderFiles.has(path) ? builderRoot : repositoryRoot, path)),
         })),
       );
       const implemented = availability.every((item) => item.present);

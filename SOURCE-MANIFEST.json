@@ -36,8 +36,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 207,
-      "sha256": "572ee54242374883cf77823113850351ba912b8f2231f15f97d17af00862d6e7"
+      "bytes": 317,
+      "sha256": "af3d58162f2046f5bdcc92c0f925aa29e7c6b4bfaf44338a4770dd443ec7a447"
     },
     {
       "path": "config/license-compatibility-v1.json",
@@ -401,8 +401,8 @@
     },
     {
       "path": "scripts/offline-data/preflight_production.mjs",
-      "bytes": 6393,
-      "sha256": "110c8296900942753fd6b9fd14a92a893c8a66e25c629862d165e353d8a94fd5"
+      "bytes": 6867,
+      "sha256": "34ed1b9b03ef94cfdddc745ab334ca18f4d85c013e0a1bbb725fa085d7e39b88"
     },
     {
       "path": "scripts/offline-data/project_offline_canonical.mjs",
@@ -543,6 +543,11 @@
       "path": "tests/data/offline-completeness.test.ts",
       "bytes": 4367,
       "sha256": "2233b6592aa3e985423dea4eb3dde7c7367ad6ca613065c2ed839d975dcb6d02"
+    },
+    {
+      "path": "tests/data/split-preflight.test.ts",
+      "bytes": 1574,
+      "sha256": "3b05b199119c0c2b8ecd0f78023d36404e475c6b8e7bd0704ce1bfeeebf996ac"
     },
     {
       "path": "tests/data/wikidata-entity-fetch-contract.test.ts",
