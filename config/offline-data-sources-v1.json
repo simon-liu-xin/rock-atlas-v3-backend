@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "sources": {
+    "musicbrainz": {
+      "latest_pointer": "https://data.metabrainz.org/pub/musicbrainz/data/fullexport/LATEST",
+      "snapshot_url_template": "https://data.metabrainz.org/pub/musicbrainz/data/fullexport/{snapshot}/",
+      "cadence": "twice-weekly snapshot; optional hourly replication",
+      "required_files": ["mbdump.tar.bz2", "SHA256SUMS", "SHA256SUMS.asc"],
+      "optional_files": ["mbdump-derived.tar.bz2"],
+      "signing_key_fingerprint": "D5E63B4BDCCE195642948684B8FC2375C777580F",
+      "metadata_max_bytes": 10000000,
+      "partitions": {
+        "mbdump.tar.bz2": "musicbrainz-core-cc0",
+        "mbdump-derived.tar.bz2": "musicbrainz-derived-nc"
+      },
+      "documentation": "https://musicbrainz.org/doc/MusicBrainz_Database/Download"
+    },
+    "discogs": {
+      "directory_url_template": "https://data.discogs.com/?prefix=data/{year}/",
+      "statistics_url": "https://api.discogs.com/",
+      "rock_release_statistics_url": "https://api.discogs.com/database/search?type=release&genre=Rock&per_page=1",
+      "rock_master_statistics_url": "https://api.discogs.com/database/search?type=master&genre=Rock&per_page=1",
+      "cadence": "monthly full replacement",
+      "required_kinds": ["CHECKSUM", "artists", "labels", "masters", "releases"],
+      "partition": "discogs-cc0",
+      "documentation": "https://data.discogs.com/"
+    },
+    "wikidata": {
+      "entity_directory": "https://dumps.wikimedia.org/wikidatawiki/entities/",
+      "incremental_directory": "https://dumps.wikimedia.org/other/incr/wikidatawiki/",
+      "action_api": "https://www.wikidata.org/w/api.php",
+      "cadence": "weekly full dump; daily incremental dump; tracked-QID refresh as scheduled",
+      "partition": "wikidata-cc0",
+      "documentation": "https://www.wikidata.org/wiki/Wikidata:Database_download"
+    }
+  }
+}

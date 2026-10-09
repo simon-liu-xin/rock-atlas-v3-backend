@@ -1,0 +1,19 @@
+services:
+  database:
+    image: postgres:18-alpine
+    container_name: musicwiki-catalog-postgres-v2
+    environment:
+      POSTGRES_DB: musicwiki
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${ROCK_ATLAS_POSTGRES_PASSWORD:?Set a local database password}
+    volumes:
+      - catalog-postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d musicwiki"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+volumes:
+  catalog-postgres:
+    name: musicwiki-catalog-postgres-v2

@@ -1,0 +1,117 @@
+{
+  "snapshot_version": "1.0",
+  "generated_at": "2026-08-02T20:16:29.264Z",
+  "probe_mode": "metadata-only",
+  "full_archives_downloaded": false,
+  "source_snapshots": {
+    "musicbrainz": {
+      "snapshot_id": "20260801-002250",
+      "directory_url": "https://data.metabrainz.org/pub/musicbrainz/data/fullexport/20260801-002250/",
+      "files": [
+        {
+          "name": "mbdump-derived.tar.bz2",
+          "bytes": 507409554,
+          "license_partition": "musicbrainz-derived-nc"
+        },
+        {
+          "name": "mbdump.tar.bz2",
+          "bytes": 7400395332,
+          "license_partition": "musicbrainz-core-cc0"
+        }
+      ]
+    },
+    "discogs": {
+      "snapshot_id": "20260801",
+      "directory_url": "https://data.discogs.com/?prefix=data/2026/",
+      "files": [
+        {
+          "name": "discogs_20260801_CHECKSUM.txt",
+          "bytes": 388,
+          "license_partition": "discogs-cc0"
+        },
+        {
+          "name": "discogs_20260801_artists.xml.gz",
+          "bytes": 471600000,
+          "license_partition": "discogs-cc0"
+        },
+        {
+          "name": "discogs_20260801_labels.xml.gz",
+          "bytes": 85900000,
+          "license_partition": "discogs-cc0"
+        },
+        {
+          "name": "discogs_20260801_masters.xml.gz",
+          "bytes": 593200000,
+          "license_partition": "discogs-cc0"
+        },
+        {
+          "name": "discogs_20260801_releases.xml.gz",
+          "bytes": 10400000000,
+          "license_partition": "discogs-cc0"
+        }
+      ],
+      "catalog_statistics": {
+        "releases": 19344372,
+        "artists": 10197554,
+        "labels": 2417849,
+        "rock_seed_releases": 6299338,
+        "rock_masters": 811108,
+        "rock_seed_release_fraction": 0.3256419
+      }
+    },
+    "wikidata": {
+      "snapshot_id": "latest-directory-links",
+      "directory_url": "https://dumps.wikimedia.org/wikidatawiki/entities/",
+      "files": [
+        {
+          "name": "latest-all.json.bz2",
+          "bytes": 102354154676,
+          "license_partition": "wikidata-cc0"
+        },
+        {
+          "name": "latest-truthy.nt.bz2",
+          "bytes": 43146421462,
+          "license_partition": "wikidata-cc0"
+        }
+      ]
+    }
+  },
+  "assessment": {
+    "generated_at": "2026-08-02T20:16:29.264Z",
+    "optional_nc_archive_bytes": 507409554,
+    "discogs_selectivity": {
+      "total_releases": 19344372,
+      "rock_seed_releases": 6299338,
+      "rock_masters": 811108,
+      "rock_seed_release_fraction": 0.3256419,
+      "complete_catalog_selected_release_fraction": null,
+      "lower_bound_selected_release_fraction": 0.3256419,
+      "upper_bound_selected_release_fraction": 1,
+      "capacity_effect": "informational-until-full-scan"
+    },
+    "recommended": {
+      "bootstrap_strategy": "tracked-qid-api",
+      "includes_full_wikidata_dump": false,
+      "required_archive_bytes": 18951095720,
+      "estimated_stable_working_bytes": 282554292604,
+      "estimated_peak_working_bytes": 381448295016,
+      "provisioned_disk_bytes": 512000000000
+    },
+    "full_wikidata_variant": {
+      "bootstrap_strategy": "full-json-dump",
+      "includes_full_wikidata_dump": true,
+      "required_archive_bytes": 121305250396,
+      "estimated_peak_working_bytes": 886156604368,
+      "provisioned_disk_bytes": 1000000000000
+    },
+    "assumptions": {
+      "musicbrainz_postgres_budget_bytes": 100000000000,
+      "discogs_streaming_multiplier": 3,
+      "wikidata_tracked_subset_budget_bytes": 10000000000,
+      "application_indexes_budget_bytes": 100000000000,
+      "full_wikidata_parse_scratch_bytes": 300000000000,
+      "refresh_headroom_multiplier": 1.35,
+      "retained_archive_generations": 2
+    }
+  }
+}

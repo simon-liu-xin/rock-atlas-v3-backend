@@ -1,0 +1,182 @@
+{
+  "plan_version": "1.0",
+  "generated_at": "2026-08-03T00:13:43.000Z",
+  "mode": "dry-run",
+  "network_requests_executed": 0,
+  "full_archives_downloaded": false,
+  "generation_id": "mb-20260801-002250__discogs-20260801",
+  "data_root": "/Volumes/MusicWikiData",
+  "download_authorization": "not-authorized",
+  "execution_ready": false,
+  "capacity_gate": {
+    "status": "blocked",
+    "filesystem_capacity_bytes": 494384795648,
+    "filesystem_available_bytes": 5512433664,
+    "required_free_bytes": 381448295016
+  },
+  "known_download_bytes": 18951095720,
+  "layout": {
+    "incoming": {
+      "musicbrainz": "incoming/musicbrainz/20260801-002250/",
+      "discogs": "incoming/discogs/20260801/"
+    },
+    "verified": {
+      "musicbrainz": "verified/musicbrainz/20260801-002250/",
+      "discogs": "verified/discogs/20260801/"
+    },
+    "generation_stage": "generations/mb-20260801-002250__discogs-20260801/stage/",
+    "generation_canonical": "generations/mb-20260801-002250__discogs-20260801/canonical/",
+    "published": "published/mb-20260801-002250__discogs-20260801/",
+    "state": "state/mb-20260801-002250__discogs-20260801.json"
+  },
+  "artifacts": [
+    {
+      "artifact_id": "musicbrainz:mbdump.tar.bz2",
+      "source": "musicbrainz",
+      "role": "archive",
+      "required": true,
+      "filename": "mbdump.tar.bz2",
+      "source_url": "https://data.metabrainz.org/pub/musicbrainz/data/fullexport/20260801-002250/mbdump.tar.bz2",
+      "expected_bytes": 7400395332,
+      "max_bytes": 7400395332,
+      "destination_relative": "incoming/musicbrainz/20260801-002250/mbdump.tar.bz2",
+      "license_partition": "musicbrainz-core-cc0",
+      "verification": {
+        "method": "sha256-signed-manifest",
+        "checksum_artifact_id": "musicbrainz:SHA256SUMS",
+        "signature_artifact_id": "musicbrainz:SHA256SUMS.asc",
+        "trusted_fingerprint": "D5E63B4BDCCE195642948684B8FC2375C777580F"
+      }
+    },
+    {
+      "artifact_id": "musicbrainz:SHA256SUMS",
+      "source": "musicbrainz",
+      "role": "checksum-manifest",
+      "required": true,
+      "filename": "SHA256SUMS",
+      "source_url": "https://data.metabrainz.org/pub/musicbrainz/data/fullexport/20260801-002250/SHA256SUMS",
+      "expected_bytes": null,
+      "max_bytes": 10000000,
+      "destination_relative": "incoming/musicbrainz/20260801-002250/SHA256SUMS",
+      "license_partition": "musicbrainz-core-cc0",
+      "verification": {
+        "method": "signed-metadata",
+        "signature_artifact_id": "musicbrainz:SHA256SUMS.asc",
+        "trusted_fingerprint": "D5E63B4BDCCE195642948684B8FC2375C777580F"
+      }
+    },
+    {
+      "artifact_id": "musicbrainz:SHA256SUMS.asc",
+      "source": "musicbrainz",
+      "role": "signature",
+      "required": true,
+      "filename": "SHA256SUMS.asc",
+      "source_url": "https://data.metabrainz.org/pub/musicbrainz/data/fullexport/20260801-002250/SHA256SUMS.asc",
+      "expected_bytes": null,
+      "max_bytes": 10000000,
+      "destination_relative": "incoming/musicbrainz/20260801-002250/SHA256SUMS.asc",
+      "license_partition": "musicbrainz-core-cc0",
+      "verification": {
+        "method": "transport-size-only"
+      }
+    },
+    {
+      "artifact_id": "discogs:CHECKSUM",
+      "source": "discogs",
+      "role": "checksum-manifest",
+      "required": true,
+      "filename": "discogs_20260801_CHECKSUM.txt",
+      "source_url": "https://data.discogs.com/?prefix=data%2F2026%2F&download=data%2F2026%2Fdiscogs_20260801_CHECKSUM.txt",
+      "expected_bytes": 388,
+      "max_bytes": 388,
+      "destination_relative": "incoming/discogs/20260801/discogs_20260801_CHECKSUM.txt",
+      "license_partition": "discogs-cc0",
+      "verification": {
+        "method": "transport-size-only"
+      }
+    },
+    {
+      "artifact_id": "discogs:artists",
+      "source": "discogs",
+      "role": "archive",
+      "required": true,
+      "filename": "discogs_20260801_artists.xml.gz",
+      "source_url": "https://data.discogs.com/?prefix=data%2F2026%2F&download=data%2F2026%2Fdiscogs_20260801_artists.xml.gz",
+      "expected_bytes": 471600000,
+      "max_bytes": 471600000,
+      "destination_relative": "incoming/discogs/20260801/discogs_20260801_artists.xml.gz",
+      "license_partition": "discogs-cc0",
+      "verification": {
+        "method": "sha256-manifest",
+        "checksum_artifact_id": "discogs:CHECKSUM"
+      }
+    },
+    {
+      "artifact_id": "discogs:labels",
+      "source": "discogs",
+      "role": "archive",
+      "required": true,
+      "filename": "discogs_20260801_labels.xml.gz",
+      "source_url": "https://data.discogs.com/?prefix=data%2F2026%2F&download=data%2F2026%2Fdiscogs_20260801_labels.xml.gz",
+      "expected_bytes": 85900000,
+      "max_bytes": 85900000,
+      "destination_relative": "incoming/discogs/20260801/discogs_20260801_labels.xml.gz",
+      "license_partition": "discogs-cc0",
+      "verification": {
+        "method": "sha256-manifest",
+        "checksum_artifact_id": "discogs:CHECKSUM"
+      }
+    },
+    {
+      "artifact_id": "discogs:masters",
+      "source": "discogs",
+      "role": "archive",
+      "required": true,
+      "filename": "discogs_20260801_masters.xml.gz",
+      "source_url": "https://data.discogs.com/?prefix=data%2F2026%2F&download=data%2F2026%2Fdiscogs_20260801_masters.xml.gz",
+      "expected_bytes": 593200000,
+      "max_bytes": 593200000,
+      "destination_relative": "incoming/discogs/20260801/discogs_20260801_masters.xml.gz",
+      "license_partition": "discogs-cc0",
+      "verification": {
+        "method": "sha256-manifest",
+        "checksum_artifact_id": "discogs:CHECKSUM"
+      }
+    },
+    {
+      "artifact_id": "discogs:releases",
+      "source": "discogs",
+      "role": "archive",
+      "required": true,
+      "filename": "discogs_20260801_releases.xml.gz",
+      "source_url": "https://data.discogs.com/?prefix=data%2F2026%2F&download=data%2F2026%2Fdiscogs_20260801_releases.xml.gz",
+      "expected_bytes": 10400000000,
+      "max_bytes": 10400000000,
+      "destination_relative": "incoming/discogs/20260801/discogs_20260801_releases.xml.gz",
+      "license_partition": "discogs-cc0",
+      "verification": {
+        "method": "sha256-manifest",
+        "checksum_artifact_id": "discogs:CHECKSUM"
+      }
+    }
+  ],
+  "plan_fingerprint": "f7496289d758139b45d7bc0561c0bdc073a938c0f258862a9c5cb32837638c38",
+  "capacity_mode": "bootstrap",
+  "published_generation_reused": false,
+  "published_reuse_reason": "no-published-generation",
+  "published_content_allocated_bytes": 0,
+  "target_filesystem": {
+    "requested_data_root": "/Volumes/MusicWikiData",
+    "resolved_data_root": "/Volumes/MusicWikiData",
+    "probe_path": "/Volumes",
+    "filesystem_device_id": 16777234,
+    "filesystem_capacity_bytes": 494384795648,
+    "filesystem_available_bytes": 5512433664
+  },
+  "evidence": {
+    "capacity_snapshot_path": "data/sources/offline-db-capacity-v1.json",
+    "published_state_path": "data/sources/offline-published-state-v1.json",
+    "tracked_qid_manifest_path": "data/sources/offline-poc/manifest.json",
+    "source_config_path": "config/offline-data-sources-v1.json"
+  }
+}

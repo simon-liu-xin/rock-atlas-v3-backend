@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "discogs": {
+    "repository": "philipmat/discogs-xml2db",
+    "commit": "d2542edaa53dbc0ce6b96e90699d555a93370e70",
+    "directory": "tests/fixtures",
+    "max_total_bytes": 50000000,
+    "files": [
+      { "kind": "artists", "filename": "discogs_20260201_artists.xml", "size": 24519807 },
+      { "kind": "labels", "filename": "discogs_20260201_labels.xml", "size": 85276 },
+      { "kind": "masters", "filename": "discogs_20260201_masters.xml", "size": 1686 },
+      { "kind": "releases", "filename": "discogs_20260201_releases.xml", "size": 11799170 }
+    ]
+  },
+  "wikidata": {
+    "root_qid": "Q11399",
+    "target_qids": 100,
+    "max_sparql_bytes": 1000000,
+    "max_entity_batch_bytes": 20000000,
+    "sparql_endpoint": "https://query.wikidata.org/sparql"
+  },
+  "musicbrainz": {
+    "fixture_path": "data/sources/experiment-v1/source-snapshot.json",
+    "official_sample_snapshot": "20260801-000001",
+    "official_sample_archive": "mbdump-sample.tar.xz",
+    "official_sample_url": "https://data.metabrainz.org/pub/musicbrainz/data/sample/20260801-000001/mbdump-sample.tar.xz",
+    "official_sample_signature_url": "https://data.metabrainz.org/pub/musicbrainz/data/sample/20260801-000001/mbdump-sample.tar.xz.asc",
+    "official_sample_content_length_bytes": 356140472,
+    "official_sample_signature_bytes": 488,
+    "official_sample_max_bytes": 400000000,
+    "signing_key_fingerprint": "D5E63B4BDCCE195642948684B8FC2375C777580F",
+    "signing_keyserver": "hkps://keyserver.ubuntu.com",
+    "server_repository": "metabrainz/musicbrainz-server",
+    "server_commit": "424c5fad44da2b3ad55d08286fe8ad07c11ec471",
+    "expected_schema_sequence": 31
+  }
+}

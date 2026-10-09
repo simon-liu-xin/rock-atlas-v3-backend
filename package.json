@@ -1,0 +1,46 @@
+{
+  "name": "rock-atlas-v3-backend",
+  "version": "3.0.0",
+  "private": true,
+  "description": "An evidence-first, downloadable rock music knowledge graph.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "npm@10.9.8",
+  "engines": {
+    "node": ">=22.18.0 <23",
+    "npm": ">=10.9.0 <11"
+  },
+  "scripts": {
+    "data:bootstrap:plan": "node scripts/offline-data/plan_bootstrap.mjs",
+    "data:bootstrap:acquire-verify": "node scripts/offline-data/acquire_verify_offline.mjs",
+    "data:capacity": "node scripts/probe-offline-data-capacity.mjs",
+    "data:catalog:styles": "node scripts/fetch-wikidata-rock-style-catalog.mjs",
+    "data:catalog:representatives": "node scripts/fetch-wikidata-rock-representatives.mjs",
+    "data:catalog:validate-sources": "node scripts/fetch-bounded-source-validations.mjs",
+    "data:catalog:build": "node scripts/build-published-rock-catalog.mjs",
+    "data:catalog:postgres": "node scripts/offline-data/load_bounded_catalog_postgres.mjs",
+    "data:project:canonical": "node scripts/offline-data/project_offline_canonical.mjs",
+    "data:production:preflight": "node scripts/offline-data/preflight_production.mjs",
+    "data:recovery:plan": "node scripts/offline-data/catalog_postgres_pitr_plan.mjs",
+    "data:full:pipeline": "node scripts/offline-data/run_full_catalog_pipeline.mjs",
+    "data:stage:discogs": "python3 scripts/offline-data/discogs_rock_stage.py",
+    "data:stage:musicbrainz": "node scripts/offline-data/stage_musicbrainz_core.mjs",
+    "data:stage:wikidata": "node scripts/offline-data/fetch_wikidata_tracked.mjs",
+    "data:update:plan": "node scripts/offline-data/plan_offline_updates.mjs",
+    "data:update:wikidata:plan": "node scripts/offline-data/plan_wikidata_refresh.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "papaparse": "5.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.1",
+    "@types/papaparse": "5.5.2",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
+  }
+}

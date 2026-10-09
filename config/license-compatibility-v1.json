@@ -1,0 +1,9 @@
+{
+  "matrix_version": "1",
+  "licenses": {
+    "CC0-1.0": {
+      "redistributable": true,
+      "allowed_packages": ["rock-core-cc0"]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "state_version": "1.0",
+  "current_generation": null,
+  "published_at": null,
+  "data_root": null,
+  "plan_fingerprint": null,
+  "sources": {
+    "musicbrainz": {
+      "snapshot_id": null
+    },
+    "discogs": {
+      "snapshot_id": null
+    },
+    "wikidata": {
+      "tracked_qids": 100,
+      "last_revision_refresh_at": null
+    }
+  }
+}

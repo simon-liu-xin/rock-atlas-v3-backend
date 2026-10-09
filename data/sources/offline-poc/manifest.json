@@ -1,0 +1,89 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-08-02T20:32:51.819Z",
+  "mode": "bounded-sample-poc",
+  "full_archives_downloaded": false,
+  "network_bytes_downloaded_this_run": 0,
+  "cached_source_payload_bytes": 37049940,
+  "sources": {
+    "musicbrainz": {
+      "mode": "existing-audited-fixture",
+      "path": "data/sources/experiment-v1/source-snapshot.json",
+      "bytes": 306539,
+      "sha256": "49c1b5774327567df926fa115605940784b6d06f42fd183cbdbff61910330ade",
+      "counts": {
+        "artists": 100,
+        "release_groups": 200,
+        "recordings": 9
+      },
+      "official_monthly_sample": {
+        "snapshot": "20260801-000001",
+        "archive": "mbdump-sample.tar.xz",
+        "content_length_bytes": 356140472,
+        "poc_manifest_path": "data/sources/offline-poc/musicbrainz-sample-manifest.json",
+        "verified": true,
+        "archive_sha256": "2d5e94b0016edb3fede065ff8de7dc7ed4b4b477cf057431d318a7c4c4eadbc8"
+      }
+    },
+    "discogs": {
+      "scope_status": "sample-incomplete",
+      "repository": "philipmat/discogs-xml2db",
+      "commit": "d2542edaa53dbc0ce6b96e90699d555a93370e70",
+      "files": [
+        {
+          "kind": "artists",
+          "filename": "discogs_20260201_artists.xml",
+          "bytes": 24519807,
+          "sha256": "b7205d56d09dc78d03cedadc601d5a0816414ed5e7e9e3fb403dac90fe8b09e6",
+          "source_url": "https://raw.githubusercontent.com/philipmat/discogs-xml2db/d2542edaa53dbc0ce6b96e90699d555a93370e70/tests/fixtures/discogs_20260201_artists.xml"
+        },
+        {
+          "kind": "labels",
+          "filename": "discogs_20260201_labels.xml",
+          "bytes": 85276,
+          "sha256": "d791bb0deb51407effcef61a2640d1f6f5ba9323709deea38d64f91bfc401b00",
+          "source_url": "https://raw.githubusercontent.com/philipmat/discogs-xml2db/d2542edaa53dbc0ce6b96e90699d555a93370e70/tests/fixtures/discogs_20260201_labels.xml"
+        },
+        {
+          "kind": "masters",
+          "filename": "discogs_20260201_masters.xml",
+          "bytes": 1686,
+          "sha256": "f78eed9cd6208a170dae7ca511c946c86f5afcb363f6e92e6a0c74de77caa89c",
+          "source_url": "https://raw.githubusercontent.com/philipmat/discogs-xml2db/d2542edaa53dbc0ce6b96e90699d555a93370e70/tests/fixtures/discogs_20260201_masters.xml"
+        },
+        {
+          "kind": "releases",
+          "filename": "discogs_20260201_releases.xml",
+          "bytes": 11799170,
+          "sha256": "2ccc6c89d7226206ff9941d0872e1ad019bb26145e150edc26e161e11eb3dbb4",
+          "source_url": "https://raw.githubusercontent.com/philipmat/discogs-xml2db/d2542edaa53dbc0ce6b96e90699d555a93370e70/tests/fixtures/discogs_20260201_releases.xml"
+        }
+      ],
+      "summary_path": "data/sources/offline-poc/discogs-rock-summary.json",
+      "counts": {
+        "artists_selected": 4,
+        "complete_artist_releases": 3,
+        "masters_selected": 1,
+        "qualifying_artists": 4,
+        "release_elements_read": 50,
+        "releases_scanned_per_pass": 25,
+        "rock_seed_releases": 3
+      },
+      "rock_styles": 17,
+      "reference_audit": {
+        "missing_artists": 0,
+        "missing_labels": 3,
+        "missing_masters": 0
+      }
+    },
+    "wikidata": {
+      "root_qid": "Q11399",
+      "query_url": "https://query.wikidata.org/sparql?query=SELECT+DISTINCT+%3Fstyle+WHERE+%7B+%3Fstyle+wdt%3AP279*+wd%3AQ11399.+%7D+ORDER+BY+%3Fstyle+LIMIT+100&format=json",
+      "tracked_qids": 100,
+      "request_batches": 2,
+      "entities_with_revision": 100,
+      "cache_bytes": 337462,
+      "qid_set_sha256": "b7047612f4658a3d16ec5a27f975827516784e2d2d1e9f37311589b760363cda"
+    }
+  }
+}
